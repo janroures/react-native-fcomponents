@@ -1,3 +1,2 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+// export { default as StorybookUIRoot } from '../.storybook';
+export { default as FBox } from './components/base/FBox';

@@ -5,7 +5,7 @@ Components library
 ## Installation
 
 ```sh
-npm install react-native-fcomponents
+yarn add react-native-fcomponents
 ```
 
 ## Usage
