@@ -18,7 +18,15 @@ type Props = BoxStyleProps & {
   leftComponent?: React.ReactNode;
   rightComponent?: React.ReactNode;
   placeholder?: string;
-  type: 'text' | 'textbox' | 'email' | 'password' | 'number' | 'date' | 'time';
+  type:
+    | 'text'
+    | 'textbox'
+    | 'email'
+    | 'password'
+    | 'number'
+    | 'date'
+    | 'time'
+    | 'datetime';
   value?: string;
   onValueChange?: (value: string) => void;
 };
@@ -117,26 +125,40 @@ export const Input = (props: Props) => {
           />
         )}
         {props.type === 'date' && (
-          <DateTimePicker
-            style={{
-              width: '100%',
-            }}
-            testID="datePicker"
-            value={date}
-            mode={'date'}
-            onChange={onDateChange}
-          />
+          <FBox w={'100%'} ai="start">
+            <DateTimePicker
+              testID="datePicker"
+              value={date}
+              mode={'date'}
+              onChange={onDateChange}
+            />
+          </FBox>
         )}
         {props.type === 'time' && (
-          <DateTimePicker
-            style={{
-              width: '100%',
-            }}
-            testID="timePicker"
-            value={time}
-            mode={'time'}
-            onChange={onTimeChange}
-          />
+          <FBox w={'100%'} ai="start">
+            <DateTimePicker
+              testID="timePicker"
+              value={time}
+              mode={'time'}
+              onChange={onTimeChange}
+            />
+          </FBox>
+        )}
+        {props.type === 'datetime' && (
+          <FBox w={'100%'} ai="start" row>
+            <DateTimePicker
+              testID="datePicker"
+              value={date}
+              mode={'date'}
+              onChange={onDateChange}
+            />
+            <DateTimePicker
+              testID="timePicker"
+              value={time}
+              mode={'time'}
+              onChange={onTimeChange}
+            />
+          </FBox>
         )}
         {props.type === 'password' && (
           <FButton

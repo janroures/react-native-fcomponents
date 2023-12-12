@@ -71,3 +71,11 @@ export const Time = {
     placeholder: 'Insert time',
   },
 };
+
+export const DateTime = {
+  args: {
+    type: 'datetime',
+    topLabel: 'DateTime input',
+    placeholder: 'Insert datetime',
+  },
+};

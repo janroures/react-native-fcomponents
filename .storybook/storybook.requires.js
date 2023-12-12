@@ -48,6 +48,7 @@ try {
 const getStories = () => {
   return {
     './components/Avatar/Avatar.stories.tsx': require('../src/components/Avatar/Avatar.stories.tsx'),
+    './components/Button/Button.stories.tsx': require('../src/components/Button/Button.stories.tsx'),
     './components/UserRow/UserRow.stories.tsx': require('../src/components/UserRow/UserRow.stories.tsx'),
     './components/Input/Input.stories.tsx': require('../src/components/Input/Input.stories.tsx'),
     './components/Checkbox/Checkbox.stories.tsx': require('../src/components/Checkbox/Checkbox.stories.tsx'),
@@ -55,6 +56,7 @@ const getStories = () => {
     './components/RadioButtonGroup/RadioButtonGroup.stories.tsx': require('../src/components/RadioButtonGroup/RadioButtonGroup.stories.tsx'),
     './components/Switch/Switch.stories.tsx': require('../src/components/Switch/Switch.stories.tsx'),
     './components/DropdownMenu/DropdownMenu.stories.tsx': require('../src/components/DropdownMenu/DropdownMenu.stories.tsx'),
+    './components/ProgressBar/ProgressBar.stories.tsx': require('../src/components/ProgressBar/ProgressBar.stories.tsx'),
   };
 };
 
