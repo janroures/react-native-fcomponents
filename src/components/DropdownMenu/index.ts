@@ -1,1 +1,2 @@
-export { DropdownMenu } from './DropdownMenu';
+import DropdownMenu from './DropdownMenu';
+export default DropdownMenu;

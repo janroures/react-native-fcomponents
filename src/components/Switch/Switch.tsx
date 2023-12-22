@@ -8,7 +8,7 @@ type Props = BoxStyleProps & {
   onChange: (value: boolean) => void;
 };
 
-export const Switch = (props: Props) => {
+const Switch = (props: Props) => {
   const [checked, setChecked] = useState(props.checked);
 
   const onChange = (value: boolean) => {
@@ -18,3 +18,5 @@ export const Switch = (props: Props) => {
 
   return <RNSwitch value={checked} onValueChange={onChange} />;
 };
+
+export default Switch;

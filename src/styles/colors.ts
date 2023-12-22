@@ -73,6 +73,42 @@ export const SHADOW_FRAME_BLUE = {
   }),
 };
 
+export const SHADOW_FRAME_STRONG = {
+  backgroundColor: '#FFF',
+  ...Platform.select({
+    ios: {
+      shadowColor: 'rgba(0,0,0,1)',
+      shadowOpacity: 1,
+      shadowRadius: 0,
+      shadowOffset: {
+        height: 4,
+        width: 0,
+      },
+    },
+    android: {
+      elevation: 4,
+    },
+  }),
+};
+
+export const SHADOW_FRAME_MEDIUM = {
+  backgroundColor: '#FFF',
+  ...Platform.select({
+    ios: {
+      shadowColor: 'rgba(0,0,0,0.4)',
+      shadowOpacity: 1,
+      shadowRadius: 4,
+      shadowOffset: {
+        height: 2,
+        width: 0,
+      },
+    },
+    android: {
+      elevation: 8,
+    },
+  }),
+};
+
 export const TOP_SHADOW: any = {
   backgroundColor: WHITE,
   ...Platform.select({

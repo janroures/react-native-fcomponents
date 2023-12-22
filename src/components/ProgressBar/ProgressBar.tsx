@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import FBox from '../base/FBox';
 import { BoxStyleProps } from '../../styles/interfaces';
-import { Button } from '../Button';
+import Button from '../Button';
 import { Dimensions } from 'react-native';
 import Animated, {
   useSharedValue,
@@ -27,7 +27,7 @@ type Props = BoxStyleProps & {
 
 const { width } = Dimensions.get('window');
 
-export const ProgressBar = (props: Props) => {
+const ProgressBar = (props: Props) => {
   const BAR_WIDTH = props.barWidth || width;
   const offset = useSharedValue(0);
 
@@ -91,3 +91,5 @@ export const ProgressBar = (props: Props) => {
     </FBox>
   );
 };
+
+export default ProgressBar;

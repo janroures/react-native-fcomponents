@@ -1,7 +1,7 @@
 import React from 'react';
 import FBox from '../base/FBox';
 import { BoxStyleProps } from '../../styles/interfaces';
-import { Avatar } from '../Avatar';
+import Avatar from '../Avatar';
 import FText from '../base/FText';
 import {
   BLACK_NEUTRAL,
@@ -18,7 +18,7 @@ type Props = BoxStyleProps & {
   onPress?: () => void;
 };
 
-export const UserRow = (props: Props) => {
+const UserRow = (props: Props) => {
   return (
     <FButton
       row
@@ -46,3 +46,5 @@ export const UserRow = (props: Props) => {
     </FButton>
   );
 };
+
+export default UserRow;

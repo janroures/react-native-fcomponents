@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Input } from './Input';
+import Input from './Input';
 
 const MyInputMeta = {
   title: 'Input',

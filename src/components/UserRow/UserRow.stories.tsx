@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { UserRow } from './UserRow';
+import UserRow from './UserRow';
 import FButton from '../base/FButton';
 import FText from '../base/FText';
 import { BLACK_NEUTRAL } from '../../styles/colors';

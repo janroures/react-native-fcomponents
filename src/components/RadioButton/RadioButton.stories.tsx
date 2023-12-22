@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { RadioButton } from './RadioButton';
+import RadioButton from './RadioButton';
 
 const MyRadioButtonMeta = {
   title: 'RadioButton',

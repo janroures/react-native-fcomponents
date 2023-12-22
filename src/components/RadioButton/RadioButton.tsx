@@ -15,7 +15,7 @@ type Props = BoxStyleProps & {
   onPress: () => void;
 };
 
-export const RadioButton = (props: Props) => {
+const RadioButton = (props: Props) => {
   return (
     <FButton
       row
@@ -50,3 +50,5 @@ export const RadioButton = (props: Props) => {
     </FButton>
   );
 };
+
+export default RadioButton;

@@ -6,7 +6,7 @@ import FText from '../base/FText';
 import { BLACK_NEUTRAL } from '../../styles/colors';
 
 type Props = BoxStyleProps & {
-  type: 'text' | 'icon';
+  type?: 'text' | 'icon';
   text?: string;
   textColor?: string;
   icon?: any;
@@ -16,7 +16,7 @@ type Props = BoxStyleProps & {
   onPress: () => void;
 };
 
-export const Button = (props: Props) => {
+const Button = (props: Props) => {
   if (props.type === 'icon') {
     const size = props.size || 32;
     return (
@@ -52,3 +52,5 @@ export const Button = (props: Props) => {
     </FButton>
   );
 };
+
+export default Button;

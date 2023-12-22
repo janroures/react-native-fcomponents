@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { DropdownMenu } from './DropdownMenu';
+import DropdownMenu from './DropdownMenu';
 
 const MyDropdownMenuMeta = {
   title: 'DropdownMenu',

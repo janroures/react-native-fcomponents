@@ -57,6 +57,7 @@ const getStories = () => {
     './components/Switch/Switch.stories.tsx': require('../src/components/Switch/Switch.stories.tsx'),
     './components/DropdownMenu/DropdownMenu.stories.tsx': require('../src/components/DropdownMenu/DropdownMenu.stories.tsx'),
     './components/ProgressBar/ProgressBar.stories.tsx': require('../src/components/ProgressBar/ProgressBar.stories.tsx'),
+    './components/Form/Form.stories.tsx': require('../src/components/Form/Form.stories.tsx'),
   };
 };
 

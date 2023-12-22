@@ -19,7 +19,7 @@ type Props = BoxStyleProps & {
 
 const icon = require('../../img/check.png');
 
-export const Checkbox = (props: Props) => {
+const Checkbox = (props: Props) => {
   const [checked, setChecked] = useState(props.checked);
   const size = 24;
   const radius = size / 2;
@@ -76,3 +76,5 @@ export const Checkbox = (props: Props) => {
     </FBox>
   );
 };
+
+export default Checkbox;

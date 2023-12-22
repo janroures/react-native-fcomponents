@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import FBox from '../base/FBox';
 import { BoxStyleProps } from '../../styles/interfaces';
-import { RadioButton } from '../RadioButton/RadioButton';
+import RadioButton from '../RadioButton/RadioButton';
 
 type Props = BoxStyleProps & {
   disabled?: boolean;
   options: Array<{ label: string; value: string }>;
 };
 
-export const RadioButtonGroup = (props: Props) => {
+const RadioButtonGroup = (props: Props) => {
   const options: any = props.options || [
     {
       label: 'Option 1',
@@ -38,3 +38,5 @@ export const RadioButtonGroup = (props: Props) => {
     </FBox>
   );
 };
+
+export default RadioButtonGroup;

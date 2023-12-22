@@ -9,7 +9,7 @@ type Props = BoxStyleProps & {
   src?: string;
 };
 
-export const Avatar = (props: Props) => {
+const Avatar = (props: Props) => {
   const s = props.size || 60;
   const r = s / 2;
   return (
@@ -24,3 +24,5 @@ export const Avatar = (props: Props) => {
     </FBox>
   );
 };
+
+export default Avatar;

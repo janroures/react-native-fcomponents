@@ -14,7 +14,7 @@ import FButton from '../base/FButton';
 import FIcon from '../base/FIcon';
 
 type Props = BoxStyleProps & {
-  topLabel?: string;
+  topLabel: string;
   leftComponent?: React.ReactNode;
   rightComponent?: React.ReactNode;
   placeholder?: string;
@@ -28,10 +28,11 @@ type Props = BoxStyleProps & {
     | 'time'
     | 'datetime';
   value?: string;
+  mandatory?: boolean;
   onValueChange?: (value: string) => void;
 };
 
-export const Input = (props: Props) => {
+const Input = (props: Props) => {
   const [isFocused, setIsFocused] = useState(false);
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState(new Date());
@@ -63,11 +64,10 @@ export const Input = (props: Props) => {
 
   return (
     <FBox {...props}>
-      {props.topLabel !== undefined && (
-        <FText mb={4} c={BLACK_NEUTRAL}>
-          {props.topLabel}
-        </FText>
-      )}
+      <FText mb={4} c={BLACK_NEUTRAL}>
+        {props.mandatory ? props.topLabel + ' *' : props.topLabel}
+      </FText>
+
       <FBox
         br={4}
         ph={6}
@@ -103,6 +103,7 @@ export const Input = (props: Props) => {
             onBlur={() => {
               setIsFocused(false);
             }}
+            autoCapitalize="none"
           />
         )}
         {props.type === 'textbox' && (
@@ -122,6 +123,7 @@ export const Input = (props: Props) => {
             onBlur={() => {
               setIsFocused(false);
             }}
+            autoCapitalize="none"
           />
         )}
         {props.type === 'date' && (
@@ -187,3 +189,5 @@ export const Input = (props: Props) => {
     </FBox>
   );
 };
+
+export default Input;

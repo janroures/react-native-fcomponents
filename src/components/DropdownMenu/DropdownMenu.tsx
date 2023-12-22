@@ -16,7 +16,7 @@ type Props = BoxStyleProps & {
   options: Array<{ label: string; value: string }>;
 };
 
-export const DropdownMenu = (props: Props) => {
+const DropdownMenu = (props: Props) => {
   const options: any = props.options || [
     {
       label: 'Option 1',
@@ -97,3 +97,5 @@ export const DropdownMenu = (props: Props) => {
     </FBox>
   );
 };
+
+export default DropdownMenu;

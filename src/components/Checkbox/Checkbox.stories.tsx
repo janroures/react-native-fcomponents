@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Checkbox } from './Checkbox';
+import Checkbox from './Checkbox';
 
 const MyCheckboxMeta = {
   title: 'Checkbox',

@@ -5,7 +5,7 @@ import {
   parseStylePropsToViewProps,
 } from '../../styles/interfaces';
 import { fontPixel } from '../../utils/dimensions';
-import { WHITE_NEUTRAL } from '../../styles/colors';
+import { BLACK_NEUTRAL } from '../../styles/colors';
 import { TextInput } from 'react-native';
 
 type Props = BoxStyleProps &
@@ -41,7 +41,7 @@ const FTextInput = forwardRef((props: Props, ref: any) => {
           includeFontPadding: false,
           fontSize: fontPixel(props.s || 16),
           fontWeight: props.t !== undefined ? types[props.t] : 'normal',
-          color: props.c || WHITE_NEUTRAL,
+          color: props.c || BLACK_NEUTRAL,
           textAlign: props.ta || 'left',
           ...parseStylePropsToViewProps(props),
         },
