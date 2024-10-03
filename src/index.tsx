@@ -8,6 +8,9 @@ export { default as FIcon } from './components/base/FIcon';
 export { default as FList } from './components/base/FList';
 export { default as FTextInput } from './components/base/FTextInput';
 
+import { scaleSize, scaleFont } from './styles/mixins';
+export { scaleSize, scaleFont };
+
 // COMPONENTS
 // export { default as Avatar } from './components/Avatar';
 // export { default as Button } from './components/Button';

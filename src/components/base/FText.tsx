@@ -7,7 +7,7 @@ import {
 import { fontPixel } from '../../utils/dimensions';
 import { BLACK_NEUTRAL } from '../../styles/colors';
 
-type Props = BoxStyleProps &
+export type FTExtProps = BoxStyleProps &
   TextProps & {
     s?: number;
     fwg?: string;
@@ -15,10 +15,10 @@ type Props = BoxStyleProps &
     ta?: 'center' | 'left' | 'right';
     children?: React.ReactNode;
     style?: ViewStyle | TextStyle;
-    t?: 'bold' | 'medium' | 'regular' | 'thin';
+    t?: 'bold' | 'medium' | 'regular' | 'thin' | string;
   };
 
-const FText = (props: Props) => {
+const FText = (props: FTExtProps) => {
   const types: any = {
     bold: 'bold',
     medium: '500',

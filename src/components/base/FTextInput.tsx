@@ -8,7 +8,7 @@ import { fontPixel } from '../../utils/dimensions';
 import { BLACK_NEUTRAL } from '../../styles/colors';
 import { TextInput } from 'react-native';
 
-type Props = BoxStyleProps &
+export type FTextInputProps = BoxStyleProps &
   TextInputProps & {
     dumb?: boolean;
     s?: number;
@@ -18,10 +18,10 @@ type Props = BoxStyleProps &
     style?: ViewStyle | TextStyle;
     onChangeText?: (text: string) => void;
     value?: string;
-    t?: 'bold' | 'medium' | 'regular' | 'thin';
+    t?: 'bold' | 'medium' | 'regular' | 'thin' | string;
   };
 
-const FTextInput = forwardRef((props: Props, ref: any) => {
+const FTextInput = forwardRef((props: FTextInputProps, ref: any) => {
   const types: any = {
     bold: 'bold',
     medium: '500',
