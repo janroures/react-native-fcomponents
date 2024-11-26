@@ -8,6 +8,7 @@ import {
 import { scaleSize } from './mixins';
 
 export type BoxStyleProps = {
+  gap?: number;
   flex?: number;
   fw?: string;
   w?: number | string;
@@ -64,6 +65,9 @@ export type BoxStyleProps = {
 
 export function parseStylePropsToViewProps(props: BoxStyleProps) {
   const viewProps: any = {};
+  if (props.gap) {
+    viewProps.gap = scaleSize(props.gap);
+  }
   if (props.flex) {
     viewProps.flex = props.flex;
   }
