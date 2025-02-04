@@ -7,6 +7,7 @@ export { default as FCircle } from './components/base/FCircle';
 export { default as FIcon } from './components/base/FIcon';
 export { default as FList } from './components/base/FList';
 export { default as FTextInput } from './components/base/FTextInput';
+export { default as FContainer } from './components/base/FContainer';
 
 import { scaleSize, scaleFont } from './styles/mixins';
 export { scaleSize, scaleFont };

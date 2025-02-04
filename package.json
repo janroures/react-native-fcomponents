@@ -171,6 +171,7 @@
   },
   "dependencies": {
     "@react-native-community/datetimepicker": "^7.6.2",
+    "@shopify/flash-list": "^1.7.3",
     "expo-image": "^1.5.1"
   },
   "directories": {
