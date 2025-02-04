@@ -2,7 +2,7 @@ import { Platform, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { BoxStyleProps } from '../../styles/interfaces';
 import FBox from './FBox';
-import { BLACK } from '../../styles/colors';
+import { WHITE_NEUTRAL } from '../../styles/colors';
 import React from 'react';
 
 type Props = BoxStyleProps & {
@@ -16,7 +16,7 @@ type Props = BoxStyleProps & {
 const FContainer = (props: Props) => {
   if (props.scrollable) {
     return (
-      <FBox flex={1} bc={props.bc || BLACK}>
+      <FBox flex={1} bc={props.bc || WHITE_NEUTRAL}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <SafeAreaView
             edges={
@@ -30,7 +30,7 @@ const FContainer = (props: Props) => {
             }
             style={{
               flex: 1,
-              backgroundColor: props.bc || BLACK,
+              backgroundColor: props.bc || WHITE_NEUTRAL,
               paddingTop: Platform.OS === 'android' ? (props.t ? 24 : 0) : 0,
               paddingBottom: Platform.OS === 'android' ? (props.b ? 24 : 0) : 0,
             }}
@@ -44,7 +44,7 @@ const FContainer = (props: Props) => {
     );
   }
   return (
-    <FBox flex={1} bc={props.bc || BLACK}>
+    <FBox flex={1} bc={props.bc || WHITE_NEUTRAL}>
       <SafeAreaView
         edges={
           props.t && props.b
@@ -57,7 +57,7 @@ const FContainer = (props: Props) => {
         }
         style={{
           flex: 1,
-          backgroundColor: props.bc || BLACK,
+          backgroundColor: props.bc || WHITE_NEUTRAL,
           paddingTop: Platform.OS === 'android' ? (props.t ? 24 : 0) : 0,
           paddingBottom: Platform.OS === 'android' ? (props.b ? 24 : 0) : 0,
         }}
