@@ -17,7 +17,10 @@ const FContainer = (props: Props) => {
   if (props.scrollable) {
     return (
       <FBox flex={1} bc={props.bc || WHITE_NEUTRAL}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{ flexGrow: 1 }}
+        >
           <SafeAreaView
             edges={
               props.t && props.b
