@@ -1,4 +1,4 @@
-import { Platform, ScrollView } from 'react-native';
+import { ScrollView, StyleProp, ViewStyle } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { BoxStyleProps } from '../../styles/interfaces';
 import FBox from './FBox';
@@ -11,6 +11,7 @@ type Props = BoxStyleProps & {
   t?: boolean;
   b?: boolean;
   scrollable?: boolean;
+  containerStyle?: StyleProp<ViewStyle>;
 };
 
 const FContainer = (props: Props) => {
@@ -31,12 +32,13 @@ const FContainer = (props: Props) => {
                 ? ['bottom']
                 : []
             }
-            style={{
-              flex: 1,
-              backgroundColor: props.bc || WHITE_NEUTRAL,
-              paddingTop: Platform.OS === 'android' ? (props.t ? 24 : 0) : 0,
-              paddingBottom: Platform.OS === 'android' ? (props.b ? 24 : 0) : 0,
-            }}
+            style={[
+              {
+                flex: 1,
+                backgroundColor: props.bc || WHITE_NEUTRAL,
+              },
+              props.containerStyle,
+            ]}
           >
             <FBox flex={1} {...props}>
               {props.children}
@@ -58,12 +60,13 @@ const FContainer = (props: Props) => {
             ? ['bottom']
             : []
         }
-        style={{
-          flex: 1,
-          backgroundColor: props.bc || WHITE_NEUTRAL,
-          paddingTop: Platform.OS === 'android' ? (props.t ? 24 : 0) : 0,
-          paddingBottom: Platform.OS === 'android' ? (props.b ? 24 : 0) : 0,
-        }}
+        style={[
+          {
+            flex: 1,
+            backgroundColor: props.bc || WHITE_NEUTRAL,
+          },
+          props.containerStyle,
+        ]}
       >
         <FBox flex={1} {...props}>
           {props.children}
