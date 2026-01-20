@@ -1,6 +1,6 @@
 {
   "name": "react-native-fcomponents",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "description": "Components library",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -26,15 +26,11 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-fcomponents-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
-    "prepare": "bob build",
-    "release": "release-it",
-    "storybook-generate": "sb-rn-get-stories",
-    "storybook-watch": "sb-rn-watcher"
+    "release": "release-it"
   },
   "keywords": [
     "react-native",
@@ -58,19 +54,8 @@
     "@babel/core": "^7.23.2",
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.5.0",
-    "@react-native-async-storage/async-storage": "^1.19.3",
-    "@react-native-community/slider": "^4.4.3",
-    "@react-native/eslint-config": "^0.72.2",
     "@release-it/conventional-changelog": "^5.0.0",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-controls": "^6.5.16",
-    "@storybook/addon-ondevice-actions": "^6.5.7",
-    "@storybook/addon-ondevice-controls": "^6.5.7",
-    "@storybook/core-common": "6.5.16",
-    "@storybook/react-native": "^6.5.7",
     "@types/jest": "^28.1.2",
-    "@types/react": "~17.0.21",
-    "@types/react-native": "0.70.0",
     "babel-loader": "^8.3.0",
     "commitlint": "^17.0.2",
     "del-cli": "^5.0.0",
@@ -79,24 +64,18 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.1",
     "prettier": "^2.0.5",
-    "react": "18.2.0",
-    "react-dom": "^18.2.0",
-    "react-native": "0.72.6",
+    "react": "19.1.0",
+    "react-dom": "^19.1.0",
+    "react-native": "0.81.5",
     "react-native-builder-bob": "^0.20.0",
     "react-native-safe-area-context": "^4.7.4",
     "release-it": "^15.0.0",
     "typescript": "^5.0.2"
   },
-  "resolutions": {
-    "@types/react": "17.0.21"
-  },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
   },
-  "workspaces": [
-    "example"
-  ],
   "packageManager": "yarn@3.6.1",
   "engines": {
     "node": ">= 18.0.0"
@@ -104,7 +83,6 @@
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
     ]
   },
@@ -170,11 +148,6 @@
     ]
   },
   "dependencies": {
-    "@react-native-community/datetimepicker": "^8.5.1",
-    "@shopify/flash-list": "^2.2.0",
     "expo-image": "~3.0.11"
-  },
-  "directories": {
-    "example": "example"
   }
 }

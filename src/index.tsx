@@ -11,7 +11,8 @@ export { default as FContainer } from './components/base/FContainer';
 
 import { scaleSize, scaleFont } from './styles/mixins';
 export { scaleSize, scaleFont };
-
+import { BoxStyleProps } from './styles/interfaces';
+export { BoxStyleProps };
 // COMPONENTS
 // export { default as Avatar } from './components/Avatar';
 // export { default as Button } from './components/Button';
